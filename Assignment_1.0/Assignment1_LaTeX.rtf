@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1345\cocoasubrtf380
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \\documentclass[a4paper]\{article\}\
+\
+\\usepackage[english]\{babel\}\
+\\usepackage[utf8x]\{inputenc\}\
+\\usepackage\{amsmath\}\
+\\usepackage\{graphicx\}\
+\\usepackage[colorinlistoftodos]\{todonotes\}\
+\
+\\title\{CS 344: Assignment\\#1\}\
+\\author\{Mohannad Alarifi\}\
+\
+\\begin\{document\}\
+\\maketitle\
+\
+\
+\\section\{Describe at least 2 ways of transferring files from a remote server to a local machine.\}\
+\
+scp: secure copy, linear copying locally or over network. It uses ssh for transferring data and has the same authentication and security. The syntax from remote server to a local machine:\
+\
+\
+scp \\texttt\{your\\_username@remotehost.edu:file  \\/some\\/local\\/directory\}\
+\\\\\
+rsync: secure copy if used ssh as the protocol option. It uses special transfer algorithms to make it faster. This is usually used for synchronization. The syntax from remote server to a local machine:\
+\
+\
+rsync option \\texttt\{your\\_username\}@remotehost.edu:file \\texttt\{\\/some\\/local\\/directory \}\
+\
+\
+\\section\{What are revision control systems? Why are they useful?\}\
+\
+\
+ They are basically systems that automate the tracking of any revision and change in a code or a software. They log every change and can retrieve older version and compare two versions(diff command). They number the versions and also does merging of two codes. They are useful in that they keep track of the changes done on a code. Also they make it easy for multiple programmers working on the same project to log their work and coordinate it. It is really good for group projects because it saves time and can combine the stages.\
+\
+\\section\{What is the difference between redirecting and piping? Describe each.\}\
+\
+Redirecting is putting(writing) the stdout/stdin/stderr of a process in an output file.\
+\
+Syntax: stdout \\textgreater \\ output.txt\\\\  \
+Piping is making the output of a process as the input of another process.\
+		\
+Syntax: $process1 \\mid process2$\\\\ \
+So Piping is kind of a special case of redirecting where you redirect stdout of a process to be the stdin of another one. Piping is: stdout \\textgreater \\ output.txt then stdin \\textless \\ output.txt\
+\
+\
+\\section\{What is make, and how is it useful?\}\
+\
+make is a utility that automates the building of a software system. When writing make in the command line, it looks for a file called makefile or Makefile and executes it. It saves the time for writing long compiling commands, especially for big projects. It also enables the compiling of a specific object alone. \
+\
+\\section\{Describe, in detail, the syntax of a makefile.\}\
+\
+The basic syntax for the makefile is like this:\
+	\
+    targetfile: sourcefile\
+		\
+        [TAB] command\\\\\
+	where targetfile is the file to generate, the sourcefile is the dependencies files. The command is where we write the compiling command. The command must tapped. all is the default targetfile that make execute if no other was specified. makefile can contain variables which are declared at first, they are in CAPITAL letters usually. They can be called using \\$(VARIABLE). Common variables are CC and CFLAGS. Usually the makefile contains a clean target to remove the objects created.\
+\
+\\section\{Give a find command that will run the file command on every regular file (not directories!) within the current filesystem subtree.\}\
+find -type f | xargs file\
+\
+\\end\{document\}\
+}

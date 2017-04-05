@@ -1,0 +1,5 @@
+total 88
+-rwx------. 1 alarifim upg49951     0 Jul 21 19:49 a.txt
+-rw-rw----. 1 alarifim upg49951   137 Jul 21 19:46 config
+-rwxrwx---. 1 alarifim upg49951 69960 Jul 21 19:48 msh
+-rw-rw----. 1 alarifim upg49951  7810 Jul 21 19:48 msh.c

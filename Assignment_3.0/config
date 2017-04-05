@@ -1,0 +1,4 @@
+PATH
+/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin
+FULLPATH
+/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/usr/bin/X11
